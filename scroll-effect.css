@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  transition: opacity 400ms;
+}
+
+body, .scroll-effect-wrapper, html {
+  display: block;
+  position: static;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-effect-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding: 0;
+  transform-style: preserve-3d;
+}
+
+.scroll-effect-wrapper .scroll-effect-section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.scroll-effect-menu {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  z-index: 5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.scroll-effect-menu li {
+  padding: 0;
+  text-align: center;
+}
+.scroll-effect-menu li a{
+  padding: 10px;
+  width: 4px;
+  height: 4px;
+  display: block;
+  
+}
+.scroll-effect-menu li a:before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 10px;
+}
+
+.scroll-effect-menu li a.active-scroll-effect:before{
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 1px solid black;
+  margin-top: -4px;
+  left: 8px;
+}
+
+.disabled-scroll-effect, .disabled-scroll-effect .wrapper {
+  overflow-y: auto;
+  scroll-behavior:smooth;
+}
+
+.disabled-scroll-effect .scroll-effect-wrapper .scroll-effect-section {
+  position: relative !important;
+  top: auto !important;
+}
+.disabled-scroll-effect .scroll-effect-wrapper {
+  transform: none !important;
+  min-height: 100%;
+}
+
+.disabled-scroll-effect .scroll-effect-menu {
+  display: none;
+}
+
+body.disabled-scroll-effect, .disabled-scroll-effect .scroll-effect-wrapper, html {
+  position: inherit;
+}

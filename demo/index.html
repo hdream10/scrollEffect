@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scroll-effect.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./scrollEffect.js"></script>
+    <title>scrollEffect</title>
+  </head>
+  <body>
+    <style>
+      .main section {
+        font-size: 70px;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: blue;
+      }
+      .main section:first-child {
+        background-color: #fff;
+      }
+      .main section:last-child {
+        background-color: red;
+      }
+    </style>
+    <div class="main">
+      <section><h1>Page 1</h1></section>
+      <section><h1>Page 2</h1></section>
+      <section><h1>Page 3</h1></section>
+    </div>
+    <script>
+      scrollEffect(".main", {
+        sectionContainer: "section",
+      });
+    </script>
+  </body>
+</html>
