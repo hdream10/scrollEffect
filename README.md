@@ -1,13 +1,13 @@
 # scrollEffect
 
-Вызов скрипт:<br>
+Calling the script:<br>
 scrollEffect(".main",{<br>
   sectionContainer: "section",<br>
 });<br>
 <br>
-Режимы:<br>
-  sectionContainer: "section",   //страница-контейнер<br>
-  easing: "ease",                //тип анимации<br>
-  animationTime: 1000,           //длительность анимации<br>
-  scrollMenu: true,              //меню навигации по странице<br>
-  keyboard: true,                //скролл с поомощью клавиатуры<br>
+Description:<br>
+  sectionContainer: "section",   //container page<br>
+  easing: "ease",                //animation type<br>
+  animationTime: 1000,           //animation duration<br>
+  scrollMenu: true,              //page navigation menu<br>
+  keyboard: true,                //scroll using the keyboard<br>
